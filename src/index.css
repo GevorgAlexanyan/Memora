@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  /* --- Armenian Heritage Palette --- */
+  --color-tufa: #E58B7E;         /* 🟠 Tufa Pink */
+  --color-pomegranate: #A62C2B;  /* 🔴 Pomegranate Red */
+  --color-apricot: #f79902;      /* 🟡 Apricot Gold */
+  --color-obsidian: #1A1A1B;     /* ⚫ Obsidian Black */
+  --color-parchment: #FDF5E6;    /* ⚪ Parchment Cream */
+
+  /* --- Normal Mode (Light) --- */
+  --color-bg: var(--color-parchment); /* ⚪ Background */
+  --color-text: #2D2A26;              /* ⚫ Main Text */
+  --color-muted: #71717A;              /* ⚪ Muted Text */
+  --color-primary: var(--color-apricot); /* 🔴 Primary */
+  --color-accent: var(--color-tufa);          /* 🟠 Accent */
+}
+
+/* --- Dark Theme Overrides --- */
+.dark {
+  --color-bg: var(--color-obsidian);     /* ⚫ Dark Background */
+  --color-text: var(--color-parchment);  /* ⚪ Light Text */
+  --color-muted: #8B8F97;                /* ⚪ Muted Dark */
+  --color-primary: var(--color-pomegranate); /* 🟡 Primary */
+  --color-accent: var(--color-tufa);     /* 🟠 Accent */
+}
+
